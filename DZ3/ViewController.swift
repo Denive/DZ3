@@ -12,14 +12,20 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        stringEasyTask1()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    //    Создать строку со своим именем.
+    //    Написать метод который получает это имя и возвращает кол-во символов в строке с вашим именем.
+    //    Возвращенное значение показать в консоль
+    func stringEasyTask1() {
+        print(length(name: "Vova"))
     }
 
+    func length(name: String) -> Int {
+        return name.count
+    }
 
 }
 
