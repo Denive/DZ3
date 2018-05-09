@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
 
         stringEasyTask1()
+        stringEasyTask2()
     }
 
     //    Создать строку со своим именем.
@@ -23,9 +24,18 @@ class ViewController: UIViewController {
         print(length(name: "Vova"))
     }
 
+    //  Написать метод который принимает 2 слова, например имя и фамилию,
+    //  возвращает юзернейм который имеет буквы нижнего регистра и разделяет имя и фамилию символом “_”
+    func stringEasyTask2() {
+        print(createUserName(name: "Vova", surname: "Olyinyk"))
+    }
+
+    func createUserName(name: String, surname: String) -> String {
+        return "\(name.lowercased())_\(surname.lowercased())"
+    }
+
     func length(name: String) -> Int {
         return name.count
     }
-
 }
 
