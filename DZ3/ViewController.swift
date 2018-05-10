@@ -13,9 +13,17 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        stringHardTask1()
         stringHardTask2()
         stringHardTask3()
+    }
+
+//    Создать метод который будет принимать строку где слитно написано Ваши ИмяФамилия “TungFam" и возвращать строку, где они будут разделены
+//    пробелом input = “TungFam” output = “Tung Fam" Сложность задачи в том, что имя может быть любое. Например: Введя “ArtemPigor” должно вернуть
+//    “Artem Pigor” Введя “AnnaSecure” должно вернуть “Anna Secure” Введя “BlaCar” должно вернуть “Bla Car” То есть алгоритм разбивает
+//    два слова которые начинаются на большую букву
+    func stringHardTask1() {
+        print(splitByUpperCase(string: "asdAsdffsdfFGsd"))
     }
 
 //    Создать метод который принимает как аргумент строку.
@@ -26,6 +34,20 @@ class ViewController: UIViewController {
 
     func stringHardTask3() {
         print(format(number: "12345"))
+    }
+
+    func splitByUpperCase(string: String) -> String {
+        var result = ""
+
+        for ch in string {
+            if String(ch) == String(ch).uppercased() {
+                result.append(" ")
+            }
+
+            result.append(ch)
+        }
+
+        return result
     }
 
 //    Добавить запятые в строку как их расставляет калькулятор
