@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         collectionEasyTask1()
+        collectionEasyTask2()
     }
 
 
@@ -26,6 +27,16 @@ class ViewController: UIViewController {
         array.removeAll()
 
         print("After delete. Array: \(array)")
+    }
+
+    //Создать 2 массива со значениями типа Int. Сделать соединение данных массивов. Результат вывести в консоль
+    func collectionEasyTask2() {
+        let firstArray = [1,2,3]
+        let secondArray = [4,5,6]
+
+        let result = firstArray + secondArray
+
+        print(result)
     }
 
 }
