@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         collectionEasyTask1()
         collectionEasyTask2()
         collectionEasyTask3()
+        collectionEasyTask4()
     }
 
 
@@ -51,6 +52,19 @@ class ViewController: UIViewController {
         for string in array {
             print(string)
         }
+    }
+    //    Создать массив с любыми значениями типа строка.
+    //    Создать метод который будет принимать как аргумент массив.
+    //    Метод должен возвращать массив который состоит из первого и последнего элемента массива, который был параметром
+    func collectionEasyTask4() {
+        print(firstAndLastElement(array: ["1", "2", "3"]))
+    }
+
+    func firstAndLastElement(array: [String]) -> [String?]{
+        return [
+            array.first,
+            array.last
+        ]
     }
 
 }
