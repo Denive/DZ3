@@ -17,6 +17,7 @@ class ViewController: UIViewController {
         collectionEasyTask2()
         collectionEasyTask3()
         collectionEasyTask4()
+        collectionEasyTask5()
     }
 
 
@@ -65,6 +66,20 @@ class ViewController: UIViewController {
             array.first,
             array.last
         ]
+    }
+
+    //    Создать словарь в котором ключ будет Строкой а значение Целым.
+    //    Например ключ - имя, значение - возраст. Должно быть 3 элемента (3 пары).
+    //    Добавить в данный словарь еще 2 новых элемента.
+    func collectionEasyTask5() {
+        var dictionary = [
+            "Vova" : 1,
+            "Jon" : 2,
+            "Alex" : 3
+        ]
+
+        dictionary["Ivan"] = 3
+        dictionary["Test"] = 5
     }
 
 }
