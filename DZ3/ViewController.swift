@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         collectionEasyTask1()
         collectionEasyTask2()
+        collectionEasyTask3()
     }
 
 
@@ -37,6 +38,19 @@ class ViewController: UIViewController {
         let result = firstArray + secondArray
 
         print(result)
+    }
+
+    //    Создать массив с любыми значениями типа строка(во viewDidLoad()).
+    //    Создать метод который будет принимать как аргумент массив.
+    //    Метод должен выводить в консоль элементы массива (по одному в одной строке)
+    func collectionEasyTask3() {
+        printArray(["123", "asd", "###"])
+    }
+
+    func printArray(_ array: [String]) {
+        for string in array {
+            print(string)
+        }
     }
 
 }
