@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         stringHardTask1()
         stringHardTask2()
         stringHardTask3()
+        stringHardTask4()
     }
 
     //    Создать метод который будет принимать строку где слитно написано Ваши ИмяФамилия “TungFam" и возвращать строку, где они будут разделены
@@ -36,6 +37,59 @@ class ViewController: UIViewController {
     //    1234567 -> 1,234,567 12345 -> 12,345 (не использовать встроенный метод для применения формата)
     func stringHardTask3() {
         print(format(number: "12345"))
+    }
+
+    //    проверить пароль на надежность от 1 до 5
+    //    если пароль содержит числа +1
+    //    символы верхнего регистра +1
+    //    символы нижнего регистра +1
+    //    спец символы +1
+    //    если длина пароля 8 или более символов +1
+    func stringHardTask4() {
+        print(checkSecureLavel(password: "12345678ф,A"))
+    }
+
+    func checkSecureLavel(password: String) -> Int{
+        var secureLevel = 0
+
+        if containsNumber(password) {
+            secureLevel += 1
+        }
+
+        if  containsLowcaseChar(password){
+            secureLevel += 1
+        }
+
+        if  containsUpercaseChar(password){
+            secureLevel += 1
+        }
+
+        if  containsSpecialChar(password){
+            secureLevel += 1
+        }
+
+        if  password.count >= 8{
+            secureLevel += 1
+        }
+
+        return secureLevel
+    }
+
+    func containsSpecialChar(_ string: String) -> Bool {
+        return string.rangeOfCharacter(from: CharacterSet.alphanumerics.inverted) != nil
+    }
+
+    func containsUpercaseChar(_ string: String) -> Bool {
+        return string.rangeOfCharacter(from: CharacterSet.uppercaseLetters) != nil
+    }
+
+    func containsLowcaseChar(_ string: String) -> Bool {
+        return string.rangeOfCharacter(from: CharacterSet.lowercaseLetters) != nil
+    }
+
+    func containsNumber(_ string: String) -> Bool {
+        let numbersRange = string.rangeOfCharacter(from: .decimalDigits)
+        return (numbersRange != nil)
     }
 
     func splitByUpperCase(string: String) -> String {
