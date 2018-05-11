@@ -18,6 +18,7 @@ class ViewController: UIViewController {
         collectionEasyTask3()
         collectionEasyTask4()
         collectionEasyTask5()
+        collectionEasyTask6()
     }
 
 
@@ -82,5 +83,23 @@ class ViewController: UIViewController {
         dictionary["Test"] = 5
     }
 
+    //    Создать словарь в котором ключ будет Строкой а значение Целым. Например ключ - имя, значение - возраст.
+    //    Должно быть 3 элемента (3 пары). Создать метод который будет иметь 2 параметра: словарь (типа “Строка : Целое”) и ключ типа Строка.
+    //    Данный метод должен удалить из полученного (как первый аргумент) словаря элемент ключ которого был передан (как второй аргумент).
+    //    Например: передаваемый словарь будет такой: ["Max": 1, "Dasha": 2, "Sergey": 3]
+    //    И если передать второй аргумент "Sergey", то метод должен удалить элемент из передаваемого массива с ключом "Sergey".
+    func collectionEasyTask6() {
+        print(deleteElement(dictionary: [
+            "Vova" : 1,
+            "Jon" : 2,
+            "Alex" : 3
+            ], key: "Vova"))
+    }
+
+    func deleteElement(dictionary: [String: Int], key: String) -> [String: Int] {
+        var result = dictionary
+        result.removeValue(forKey: key)
+        return result
+    }
 }
 
