@@ -16,6 +16,7 @@ class ViewController: UIViewController {
         collectionHardTask1()
         collectionHardTask2()
         collectionHardTask3()
+        collectionHardTask4()
     }
 
 
@@ -73,6 +74,23 @@ class ViewController: UIViewController {
             }
         }
         return a
+    }
+
+    //    Во ViewDidLoad создать словарь внутри которого будет 2 словаря (ключ - строка, значение - словарь). С любыми данными.
+    //    Их мы будем передавать в метод, который напишем.
+    //    Создать метод который будет принимать как параметры: словарь (такого типа как выше) и строку.
+    //    Данный метод должен вернуть значение которое хранится внутри элемента ключ которого был передан как аргумент.
+    func collectionHardTask4() {
+        let dataSetForTest = [
+            "2" : [2: 3],
+            "3" : [4: 5]
+        ]
+
+        print(getValue(dictionary: dataSetForTest, key: "3") as Any)
+    }
+
+    func getValue(dictionary: [String: [Int: Int]], key: String) -> [Int: Int]? {
+        return dictionary[key]
     }
 
 }
