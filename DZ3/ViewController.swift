@@ -64,16 +64,16 @@ class ViewController: UIViewController {
     }
 
     func insertionSort(_ array: [Int]) -> [Int] {
-        var a = array
+        var result = array
 
-        for x in 1..<a.count {
+        for x in 1..<result.count {
             var y = x
-            while y > 0 && a[y] < a[y - 1] {
-                a.swapAt(y - 1, y)
+            while y > 0 && result[y] < result[y - 1] {
+                result.swapAt(y - 1, y)
                 y -= 1
             }
         }
-        return a
+        return result
     }
 
     //    Во ViewDidLoad создать словарь внутри которого будет 2 словаря (ключ - строка, значение - словарь). С любыми данными.
