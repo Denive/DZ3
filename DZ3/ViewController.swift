@@ -15,6 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view, typically from a nib.
         collectionHardTask1()
         collectionHardTask2()
+        collectionHardTask3()
     }
 
 
@@ -47,5 +48,32 @@ class ViewController: UIViewController {
     func printValues(dictionary: [String: String]) {
         print(dictionary.values)
     }
+
+    //    Cортировка массива не встроенным методом по возрастанию + удалить дубликаты
+    //    Например задается массив [3, 6, 1, 2, 2, 6, 13, 77, 36] Результат должен быть [1, 2, 3, 6, 13, 36, 77]
+    func collectionHardTask3() {
+        let dataSetForTest =  [3, 6, 1, 2, 2, 6, 13, 77, 36]
+        let  result = insertionSort(deleteDublicats(array: dataSetForTest))
+
+        print(result)
+    }
+
+    func deleteDublicats(array: [Int]) -> [Int] {
+        return Array(Set(array))
+    }
+
+    func insertionSort(_ array: [Int]) -> [Int] {
+        var a = array
+
+        for x in 1..<a.count {
+            var y = x
+            while y > 0 && a[y] < a[y - 1] {
+                a.swapAt(y - 1, y)
+                y -= 1
+            }
+        }
+        return a
+    }
+
 }
 
