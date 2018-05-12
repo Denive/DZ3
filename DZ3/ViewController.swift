@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         collectionHardTask1()
+        collectionHardTask2()
     }
 
 
@@ -29,5 +30,22 @@ class ViewController: UIViewController {
         return array.contains(value)
     }
 
+
+
+    //    метод который выведет все ключи словаря и метод который выведет все значения словаря
+    func collectionHardTask2() {
+        let dataSetForTest =  ["1":"2", "3": "4"]
+
+        printKeys(dictionary: dataSetForTest)
+        printValues(dictionary: dataSetForTest)
+    }
+
+    func printKeys(dictionary: [String: String]) {
+        print(dictionary.keys)
+    }
+
+    func printValues(dictionary: [String: String]) {
+        print(dictionary.values)
+    }
 }
 
